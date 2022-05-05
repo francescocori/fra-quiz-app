@@ -1,0 +1,64 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(22, 26, 49);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #e19f25;
+  font-size: 3rem;
+  font-weight: 700;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  font-size: 1rem;
+}
+
+.form div {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1.5rem;
+}
+.header-startModal {
+  font-size: 300;
+  margin-top: -2rem;
+}
+.input-fild {
+  border: 1px solid #e19f25;
+  border-radius: 15px;
+  padding: 15px 30px;
+  color: #e19f25;
+  background-color: rgb(22, 26, 49);
+  transition: all 0.3s ease 0s;
+  margin-top: 0.5rem;
+  cursor: pointer;
+  outline: none;
+  text-decoration: none;
+}
+.start-button {
+  width: 8rem;
+  height: 3rem;
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  padding: 10px;
+  border-radius: 15px;
+  outline: none;
+  transition: all 0.25s;
+  border: 2.5px solid #e19f25;
+  color: #e19f25;
+  background: rgb(22, 26, 49);
+}
+.start-button:hover {
+  color: rgb(22, 26, 49);
+  background-color: #e19f25;
+  cursor: pointer;
+  transform: translateY(-0.25em);
+}
+input:active {
+  background-color: transparent;
+}

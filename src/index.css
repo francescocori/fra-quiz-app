@@ -5,6 +5,10 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: rgb(22, 26, 49);
+
+  font-family: "Inter", sans-serif;
+  color: #e19f25;
 }
 
 code {

@@ -1,0 +1,41 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 2rem;
+  justify-content: space-evenly;
+  padding: 15px 20px;
+  font-family: "Inter", sans-serif;
+}
+
+.header-title {
+  display: none;
+}
+.header-name {
+  display: none;
+}
+.header-title {
+  font-size: 1rem;
+}
+.header-message {
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+.header-name {
+  font-size: 0.8rem;
+}
+
+@media screen and (min-width: 992px) {
+  .header {
+    justify-content: space-between;
+  }
+  .header-title {
+    font-size: 1rem;
+    display: block;
+  }
+
+  .header-name {
+    font-size: 0.8rem;
+    display: block;
+  }
+}
