@@ -106,7 +106,9 @@ const StartModal = ({
           >
             <option></option>
             {Categories.map((category) => (
-              <option value={category.value}>{category.category}</option>
+              <option value={category.value} key={category.value}>
+                {category.category}
+              </option>
             ))}
           </select>
         </div>

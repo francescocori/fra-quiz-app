@@ -40,7 +40,6 @@ const Game = () => {
   }
   useEffect(() => {
     getQuestions();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [category, level]);
 
   //show Question + answers......
