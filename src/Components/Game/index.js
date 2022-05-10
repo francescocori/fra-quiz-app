@@ -91,7 +91,7 @@ const Game = () => {
   };
 
   return (
-    <div>
+    <div className="game-page">
       {game.startGameModal && (
         <StartModal
           startGame={startGame}

@@ -22,10 +22,7 @@
   margin-top: 1em;
   cursor: pointer;
   font-weight: 600;
-  box-shadow: 3px 3px 12px 3px #e19f25;
-  /* width: 24rem;
-  height: 10rem;
-  font-size: 1.5rem; */
+  box-shadow: 2px 2px 8px 2px #e19f25;
 }
 
 .answer-cell:active {
@@ -49,6 +46,7 @@
     width: 24rem;
     height: 10rem;
     font-size: 1.5rem;
+    box-shadow: 3px 3px 12px 3px #e19f25;
   }
 
   .answer-cell:hover {
