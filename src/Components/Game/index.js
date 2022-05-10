@@ -12,12 +12,12 @@ const Game = () => {
     startGameModal: true,
     allQuestions: [],
     currentQuestion: "",
-    questionNumber: "0",
+    questionNumber: 0,
     correctAnswers: "",
     wrongAnswers: "",
-    score: "0",
+    score: 0,
     mixedAnswer: [],
-    selectedAnswer: 0,
+    selectedAnswer: 0, //check if used
     finalModal: false,
   });
   const [firstname, setFirstname] = useState("");
@@ -38,6 +38,7 @@ const Game = () => {
       };
     });
   }
+
   useEffect(() => {
     getQuestions();
   }, [category, level]);
@@ -71,30 +72,22 @@ const Game = () => {
   const handleClick = (e) => {
     setGame((prevGame) => {
       const { allQuestions, questionNumber, correctAnswers } = game;
-      //show final modal
-      if (questionNumber === allQuestions.length) {
-        return { ...prevGame, finalModal: true, questionNumber: 0 };
-        // add 1 to score
+      const increasedIndex = prevGame.questionNumber + 1;
+      const nextGame = {
+        ...prevGame,
+        questionNumber: increasedIndex,
+        currentQuestion: allQuestions[increasedIndex]?.question,
+        correctAnswers: allQuestions[increasedIndex]?.correct_answer ?? [],
+        wrongAnswers: allQuestions[increasedIndex]?.incorrect_answers ?? [],
+      };
+      if (questionNumber === allQuestions.length - 1) {
+        nextGame.finalModal = true;
+        nextGame.questionNumber = 0;
       } else if (e.target.value === correctAnswers) {
-        const indexIncrease = prevGame.questionNumber++;
-        return {
-          ...prevGame,
-          score: prevGame.score++,
-          questionNumber: indexIncrease,
-          currentQuestion: allQuestions[indexIncrease].question,
-          correctAnswers: allQuestions[indexIncrease].correct_answer,
-          wrongAnswers: allQuestions[indexIncrease].incorrect_answers,
-        };
-      } else {
-        const indexIncrease = prevGame.questionNumber++;
-        return {
-          ...prevGame,
-          questionNumber: indexIncrease,
-          currentQuestion: allQuestions[indexIncrease].question,
-          correctAnswers: allQuestions[indexIncrease].correct_answer,
-          wrongAnswers: allQuestions[indexIncrease].incorrect_answers,
-        };
+        nextGame.score += 1;
       }
+
+      return nextGame;
     });
   };
 
