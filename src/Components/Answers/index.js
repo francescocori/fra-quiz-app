@@ -1,6 +1,6 @@
 import React from "react";
 import "./style.css";
-const Answers = ({ isCorrect, handleClick, correctAnswers, wrongAnswers }) => {
+const Answers = ({ handleClick, correctAnswers, wrongAnswers }) => {
   let mixedAnswer = [...wrongAnswers, correctAnswers];
   mixedAnswer.sort((a, b) => 0.5 - Math.random());
   return (

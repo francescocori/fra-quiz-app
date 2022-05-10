@@ -17,7 +17,6 @@ const Game = () => {
     wrongAnswers: "",
     score: 0,
     mixedAnswer: [],
-    selectedAnswer: 0, //check if used
     finalModal: false,
   });
   const [firstname, setFirstname] = useState("");
@@ -97,11 +96,9 @@ const Game = () => {
         <StartModal
           startGame={startGame}
           firstname={firstname}
-          category={category}
           setCategory={setCategory}
           Categories={Categories}
           setFirstname={setFirstname}
-          level={level}
           setLevel={setLevel}
         />
       )}
@@ -111,13 +108,10 @@ const Game = () => {
         firstname={firstname}
       />
       <Questions currentQuestion={game.currentQuestion} />
-      {/* <Questions
-        currentQuestion={game.allQuestions[game.indexIncrease].question} */}
 
       {!game.startGameModal && (
         <Answers
           handleClick={handleClick}
-          isCorrect={game.isCorrect}
           correctAnswers={game.correctAnswers}
           wrongAnswers={game.wrongAnswers}
         />

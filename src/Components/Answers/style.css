@@ -22,7 +22,7 @@
   cursor: pointer;
 }
 
-.answer-cell:hover {
+.answer-cell:active {
   transform: translateY(-0.25em);
   box-shadow: 1px 2px 10px 6px var(--clr-greenish);
   cursor: pointer;
@@ -41,5 +41,13 @@
   .answer-cell {
     width: 20rem;
     height: 7rem;
+  }
+
+  .answer-cell:hover {
+    transform: translateY(-0.25em);
+    box-shadow: 1px 2px 10px 6px var(--clr-greenish);
+    cursor: pointer;
+    background-color: #e19f25;
+    color: rgb(22, 26, 49);
   }
 }

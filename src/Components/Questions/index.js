@@ -3,7 +3,8 @@ import "./style.css";
 const Questions = ({ currentQuestion }) => {
   return (
     <div>
-      <h2 className="question">{currentQuestion}</h2>
+      {/* code below is not best pratcice but for now seems the only way to remove unwanted caracter */}
+      <h2 dangerouslySetInnerHTML={{ __html: currentQuestion }} />
     </div>
   );
 };

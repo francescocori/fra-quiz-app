@@ -72,8 +72,6 @@ import Data from "../../Data/Categories";
 const StartModal = ({
   startGame,
   firstname,
-  category,
-  level,
   setFirstname,
   setCategory,
   Categories,
@@ -91,7 +89,6 @@ const StartModal = ({
             name="name"
             onChange={(e) => setFirstname(e.target.value)}
             value={firstname}
-            //POI C'è STO CAVOLO DI NAME CHE NN SE NE VA UNO VOLTA CHE IL FORM è STATO SUBMIT
           />
         </div>
         <div className="input-div">
