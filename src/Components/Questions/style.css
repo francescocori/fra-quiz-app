@@ -1,1 +1,13 @@
+.question-container {
+  height: 112px;
+}
 
+@media screen and (min-width: 992px) {
+  .question-container {
+    height: 3rem;
+  }
+
+  .question {
+    font-size: 2rem;
+  }
+}
