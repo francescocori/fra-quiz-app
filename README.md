@@ -1,4 +1,4 @@
-# ❓ QUIZ APP ❓
+#  QUIZ APP 📝 ❓
 
 This quiz app created with ReactJs allow you to play and test your knowledge on many different topics.
 You can choose the category and the level of difficulty, or just clikc on the start button if you want to play with more general questions not based on  one specific topic. There are ten questions for each game and at the end you will see  your final score.
