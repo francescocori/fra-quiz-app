@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Categories from "../../Data/Categories";
+import "./style.css";
 import {
   Answers,
   Navbar,
@@ -8,7 +9,6 @@ import {
   Finalscore,
   Startmodal,
 } from "../../Components";
-import "./style.css";
 
 const Game = () => {
   const [game, setGame] = useState({
@@ -32,7 +32,6 @@ const Game = () => {
     );
 
     const data = await res.json();
-    console.log(data.results);
     setGame((prevGame) => {
       return {
         ...prevGame,
@@ -45,7 +44,6 @@ const Game = () => {
     getQuestions();
   }, [category, level]);
 
-  //show Question + answers......
   const startGame = (e) => {
     const { allQuestions, questionNumber, finalModal } = game;
 
@@ -70,8 +68,7 @@ const Game = () => {
     });
   };
 
-  //handle click on cell and check if winner
-  const handleClick = (e) => {
+  const handleClickedAnswer = (e) => {
     setGame((prevGame) => {
       const { allQuestions, questionNumber, correctAnswers } = game;
       const increasedIndex = prevGame.questionNumber + 1;
@@ -114,7 +111,7 @@ const Game = () => {
 
       {!game.startGameModal && (
         <Answers
-          handleClick={handleClick}
+          handleClickedAnswer={handleClickedAnswer}
           correctAnswers={game.correctAnswers}
           wrongAnswers={game.wrongAnswers}
         />

@@ -1,7 +1,7 @@
 import React from "react";
 import "./style.css";
 
-const Answers = ({ handleClick, correctAnswers, wrongAnswers }) => {
+const Answers = ({ handleClickedAnswer, correctAnswers, wrongAnswers }) => {
   let mixedAnswer = [...wrongAnswers, correctAnswers];
   mixedAnswer.sort((a, b) => 0.5 - Math.random());
   return (
@@ -13,7 +13,7 @@ const Answers = ({ handleClick, correctAnswers, wrongAnswers }) => {
             value={answer}
             key={index}
             id={index}
-            onClick={(e) => handleClick(e)}
+            onClick={(e) => handleClickedAnswer(e)}
             dangerouslySetInnerHTML={{ __html: answer }}
           />
         );
