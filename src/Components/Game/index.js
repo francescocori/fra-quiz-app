@@ -1,12 +1,15 @@
 import React, { useEffect, useState } from "react";
-import "./style.css";
-import Navbar from "../Navbar";
-import Footer from "../Footer";
-import Questions from "../Questions";
-import Answers from "../Answers";
-import FinalScore from "../FinalScore";
-import StartModal from "../StartModal";
 import Categories from "../../Data/Categories";
+import {
+  Answers,
+  Navbar,
+  Footer,
+  Questions,
+  Finalscore,
+  Startmodal,
+} from "../../Components";
+import "./style.css";
+
 const Game = () => {
   const [game, setGame] = useState({
     startGameModal: true,
@@ -93,7 +96,7 @@ const Game = () => {
   return (
     <div className="game-page">
       {game.startGameModal && (
-        <StartModal
+        <Startmodal
           startGame={startGame}
           firstname={firstname}
           setCategory={setCategory}
@@ -118,7 +121,7 @@ const Game = () => {
       )}
       <Footer />
       {game.finalModal && (
-        <FinalScore score={game.score} startGame={startGame} />
+        <Finalscore score={game.score} startGame={startGame} />
       )}
     </div>
   );

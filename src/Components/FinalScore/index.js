@@ -1,5 +1,5 @@
 import React from "react";
-import "./style.css";
+
 const FinalScore = ({ startGame, score }) => {
   return (
     <div>
@@ -8,10 +8,8 @@ const FinalScore = ({ startGame, score }) => {
           Your score is <br />
           {` ${score}  /10`}
         </h4>
-        {/* <h4>{` ${score}  /10`}</h4> */}
         <button className="start-button" onClick={startGame}>
-          {" "}
-          Play Again{" "}
+          Play Again
         </button>
       </div>
     </div>

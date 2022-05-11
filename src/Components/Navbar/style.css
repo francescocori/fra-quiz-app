@@ -1,4 +1,4 @@
-.header {
+.navbar {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -8,33 +8,28 @@
   font-family: "Inter", sans-serif;
 }
 
-.header-title {
+.nav-title {
   display: none;
 }
-.header-name {
+.nav-name {
   display: none;
 }
-.header-title {
-  font-size: 1rem;
-}
-.header-message {
+
+.nav-message {
   font-size: 0.8rem;
   font-weight: 500;
 }
-.header-name {
-  font-size: 0.8rem;
-}
 
 @media screen and (min-width: 992px) {
-  .header {
+  .navbar {
     justify-content: space-between;
   }
-  .header-title {
+  .nav-title {
     font-size: 1rem;
     display: block;
   }
 
-  .header-name {
+  .nav-name {
     font-size: 0.8rem;
     display: block;
   }

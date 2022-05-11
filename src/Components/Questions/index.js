@@ -1,5 +1,6 @@
 import React from "react";
 import "./style.css";
+
 const Questions = ({ currentQuestion }) => {
   return (
     <div className="question-container">
