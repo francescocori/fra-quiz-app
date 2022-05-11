@@ -5,6 +5,9 @@ You can choose the category and the level of difficulty, or just clikc on the st
 There are ten questions for each game and at the end you can see  your final score.
 I hope you enjoy! 
 
+## Demo 
+### Click [here](http://francescocori.github.io/fra-quiz-app) to see the app running.
+
 
 ## Setup
 1. Clone the master branch of this repository.
