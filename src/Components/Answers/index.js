@@ -13,9 +13,8 @@ const Answers = ({ handleClick, correctAnswers, wrongAnswers }) => {
             key={index}
             id={index}
             onClick={(e) => handleClick(e)}
-          >
-            {answer}
-          </button>
+            dangerouslySetInnerHTML={{ __html: answer }}
+          ></button>
         );
       })}
     </div>
