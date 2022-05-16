@@ -14,6 +14,7 @@
     "axios": "^0.27.2",
     "eslint-plugin-react-hooks": "^4.6.0-next-e531a4a62-20220505",
     "gh-pages": "^3.2.3",
+    "nanoid": "^3.3.4",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "react-scripts": "5.0.1",
